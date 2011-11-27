@@ -1,0 +1,77 @@
+Following applies to version 0.1 alpha of the program
+
+I don't know why, i wanted to create a binaural beat generator program, so here the result of past 20 hrs, brainwave, which is pretty advance CUI based binaural beat generator program. Here's binaural beat intro at wikipedia.http://en.wikipedia.org/wiki/Binaural_beats
+
+Brainwave is entirely written is python and depends on your gstreamer installation. Brainwave can be executed from terminal or scripts, and accepts a array of parameters, which are detailed below, please note that none of the parameters are compulsory. When nothing is specified, a test session will play as follows
+
+--> 8Hz brainwave
+
+--> Left freq 400Hz : Right freq 408Hz
+
+--> Base freq(400Hz) volume left:100.0 right:100.0
+
+--left <num in range audible freq>:
+
+specify the left channel frequency
+
+--left-volume <num in range 0--100>:
+
+specify the volume of the above specified left frequency
+
+--right <num in range audible freq> :
+
+specify the right channel frequency
+
+--right-volume <num in range 0--100>:
+
+specify the volume of the above specified
+
+--time
+
+<num>
+
+:
+
+duration to run in second
+
+--wave <string from {delta, theta, alpha, beta, gamma, mu}> :
+
+paramets --left and --right are overwritten, if wave parameter is provided, though --left-volume and --right-volume are still applicable. The wave specified will be generated, which will produce binaural effect of frequency as detailed below
+
+["delta", 0, 4],["theta", 4, 8],["alpha", 8, 13],["beta", 13, 30],["gamma", 30, 100],["mu", 8, 13]
+
+the binaural wave will be of frequency of the mean of the 2 number provided after wave type, the binaural wave will be produced on base frequency (default is 400Hz)
+
+--base <num in range audible freq>:
+
+specify the base frequency to be used in the --wave paramter, as detailed above
+
+--bg <complete path to audio file>:
+
+specify the complete to audio file, that should be used as background audio file, all audio formats are supported, whatever your gstreamer installation is able to play. The audio will be looped during the complete brainentrainment session.
+
+--bg-volume <num in range 0--100>:
+
+specify the volume of the background audio file, mentioned above.
+
+--overlay-frequency <<num freq;num volume;num pan in range -100--100>,........>:
+
+specify additional freq to play, specify the n comma separated frequency and their description that should be played simultaneously during the session. eg --overlay-frequency "300;100;100,308;80;-100", this will play freq 300Hz at vol 100% at right speaker, likewise freq 308 will be played at vol 80% on left speaker, simultaneously, continuously during session.
+
+Note: pan value of 0 denotes the center position.
+
+Note: colon is used as separator
+
+--overlay-audio <<string path;num volume>,........>:
+
+specify additional audio file to played simultaneously during session,
+
+Note: colon is used as separator
+
+--sequential-audio <<string path;num volume>,........>
+
+specify n audio files that should be played in sequence, one after another, upon playback of all the files specified, the n files with be sequentially looped, till session is completed.
+
+You are using, re-using, modifying or distributing the program, you are bound with following terms.
+
+BrainWave : Binaural beat generator (C) Raja Jamwal 2011, <www.experiblog.co.cc> <linux1@zoho.com> Distributed under GNU GPL License Brainwave, is a pretty advance binaural beat generator program Copyright (C) 2011 Raja Jamwal This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. 
