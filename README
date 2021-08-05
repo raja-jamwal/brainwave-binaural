@@ -2,7 +2,7 @@ NOTE: The mp3 in the repo are copyright of their respective author and are meant
 
 Following applies to version 0.1 alpha of the program
 
-I don't know why, i wanted to create a binaural beat generator program, so here the result of past 20 hrs, brainwave, which is pretty advance CUI based binaural beat generator program. Here's binaural beat intro at wikipedia.http://en.wikipedia.org/wiki/Binaural_beats
+Brainwave, which is pretty advance CUI based binaural beat generator program. Here's binaural beat intro at wikipedia.http://en.wikipedia.org/wiki/Binaural_beats
 
 Brainwave is entirely written is python and depends on your gstreamer installation. Brainwave can be executed from terminal or scripts, and accepts a array of parameters, which are detailed below, please note that none of the parameters are compulsory. When nothing is specified, a test session will play as follows
 
